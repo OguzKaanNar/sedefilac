@@ -1,0 +1,182 @@
+.services-section {
+  padding: 6rem 0;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.services-header {
+  margin-bottom: 4rem;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.services-tabs {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  border-right: 1px solid var(--border-color);
+}
+
+.service-tab {
+  padding: 1.5rem 2rem;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-tab:hover {
+  color: var(--primary);
+  background-color: rgba(0, 166, 156, 0.05);
+}
+
+.service-tab.active {
+  color: var(--primary);
+  background-color: white;
+}
+
+.service-tab.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--secondary);
+}
+
+.service-content-area {
+  padding: 3rem;
+  position: relative;
+  min-height: 480px; /* Prevents height jumping during tab switching */
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: white;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.placeholder-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>') center/cover;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>') center/cover;
+}
+
+.service-card-header h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.service-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.service-features li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .service-tab {
+    white-space: nowrap;
+    border-bottom: none;
+  }
+  
+  .service-tab.active::before {
+    top: auto;
+    right: 0;
+    width: auto;
+    height: 3px;
+    background-color: var(--secondary);
+  }
+  
+  .service-content-area {
+    padding: 2rem;
+  }
+}
