@@ -93,14 +93,21 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.8rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-main);
   background-color: #f9fafb;
   transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .form-group input:focus,
