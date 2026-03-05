@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Örn. Dr. Ahmet Yılmaz"
+                      placeholder="Örn. Developer Oğuz Kaan NAR"
                     />
                   </div>
                   <div className="form-group">
