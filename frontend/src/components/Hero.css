@@ -100,6 +100,10 @@
     background: linear-gradient(180deg, rgba(15, 46, 74, 0.8) 0%, rgba(15, 46, 74, 0.9) 100%);
   }
   
+  .hero-container {
+    padding-top: 100px;
+  }
+  
   .hero-title {
     font-size: 2.5rem;
   }

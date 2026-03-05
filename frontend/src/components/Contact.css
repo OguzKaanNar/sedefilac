@@ -159,7 +159,17 @@
     gap: 1.5rem;
   }
   
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
   .contact-form-container {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-trust-badge {
+    border-radius: var(--radius-md);
+    border-left: none;
+    border-top: 3px solid var(--secondary);
   }
 }

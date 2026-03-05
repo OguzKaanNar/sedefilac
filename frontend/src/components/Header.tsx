@@ -3,6 +3,7 @@ import "./Header.css";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
           {/* We use the clean logo if possible, but for demonstration we use the fetched asset */}
           <img src="/assets/logo02.png" alt="Sedefilac" className="logo-img" />
         </a>
-        <nav className="desktop-nav">
+        <nav className={`desktop-nav ${menuOpen ? "open" : ""}`}>
           <a href="#about" className="nav-link">
             Hakkımızda
           </a>
@@ -52,6 +53,15 @@ const Header: React.FC = () => {
             Teklif İsteyin
           </a>
         </div>
+        <button
+          className={`mobile-menu-btn ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menüyü aç/kapat"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );

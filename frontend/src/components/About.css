@@ -81,5 +81,20 @@
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-experience-badge {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+  }
+  .experience-year {
+    font-size: 2rem;
   }
 }
